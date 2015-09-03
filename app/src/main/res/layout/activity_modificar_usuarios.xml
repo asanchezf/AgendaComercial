@@ -1,0 +1,215 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AltaUsuarios" >
+ 
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:padding="10dp" >
+ 
+       <TextView
+           android:id="@+id/label_nombre"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/Name"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+       <EditText
+           android:id="@+id/nombre"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/label_nombre"
+           android:ems="10" />
+    
+       <TextView
+           android:id="@+id/label_condiciones"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/nombre"
+           android:layout_marginTop="20dp"
+           android:text="@string/Apell"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+       <EditText
+           android:id="@+id/apellidos"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/label_condiciones"
+           android:ems="10"
+           android:inputType="textMultiLine">
+       </EditText>
+        
+       <TextView
+           android:id="@+id/label_contacto"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/apellidos"
+           android:layout_marginTop="20dp"
+           android:text="@string/Adress"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+       <EditText
+           android:id="@+id/direc"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/label_contacto"
+           android:ems="10" >
+
+       </EditText>
+        
+       <TextView
+           android:id="@+id/label_telefono"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/direc"
+           android:layout_marginTop="20dp"
+           android:text="@string/Telephone"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+       <EditText
+           android:id="@+id/telefono"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/label_telefono"
+           android:ems="10"
+           android:inputType="phone" >
+       </EditText>
+        
+       <TextView
+           android:id="@+id/label_email"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/telefono"
+           android:layout_marginTop="20dp"
+           android:text="@string/Email"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+      <EditText
+           android:id="@+id/email"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/label_email"
+           android:ems="10"
+           android:inputType="textEmailAddress"/>
+      
+              <TextView
+            android:id="@+id/t_tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:layout_marginTop="20dp"
+            android:text="Zona:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!--- Para que no aparezca  
+        <Spinner
+            android:id="@+id/tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/t_tipo"
+            android:layout_toRightOf="@id/t_tipo" />
+        -->
+        
+           <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t_tipo"
+            android:layout_alignLeft="@+id/t_tipo" >
+
+               <RadioButton
+                   android:id="@+id/radio1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:checked="true"
+                   android:text="Alcorcón y alrededores" />
+
+               <RadioButton
+                   android:id="@+id/radio2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Madrid capital" />
+
+               <RadioButton
+                   android:id="@+id/radio3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Madrid CC.AA" />
+
+               <RadioButton
+                   android:id="@+id/radio4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Otra CC.AA." />
+
+               <RadioButton
+                   android:id="@+id/radio5"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Otra País" />
+
+               <RadioButton
+                   android:id="@+id/radio6"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Sin calificar" />
+        </RadioGroup>
+        
+         <TextView
+            android:id="@+id/label_observaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup1"
+            android:layout_marginTop="20dp"
+            android:text="@string/Observaciones"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/observaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/label_observaciones"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+       
+ <LinearLayout
+     android:id="@+id/botonera"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_below="@+id/observaciones"
+     android:layout_marginTop="20dp"
+     android:gravity="center"
+     android:orientation="horizontal" >
+ 
+     <Button
+         android:id="@+id/boton_cancelar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/Cancel" 
+         />
+ 
+     <Button
+         android:id="@+id/boton_guardar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/Save" />
+ 
+ </LinearLayout>
+       
+        
+   </RelativeLayout>
+   
+ 
+     
+   
+   
+</ScrollView>
